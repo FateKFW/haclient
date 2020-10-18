@@ -1,0 +1,5 @@
+hbase:
+  ip: myserver
+
+hadoop:
+  ip: myserver
