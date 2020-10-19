@@ -1,4 +1,4 @@
-package com.rdz.haclient;
+package com.rdz.haclient.hbase.common;
 
 import com.rdz.haclient.hbase.HBaseClient;
 import org.apache.hadoop.hbase.*;
