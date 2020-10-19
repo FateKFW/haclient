@@ -2,7 +2,7 @@
 hadoop系列使用案例
 
 ## HDFS
-(HDFS)[https://github.com/FateKFW/haclient/tree/main/src/main/java/com/rdz/haclient/hdfs]
+[HDFS](https://github.com/FateKFW/haclient/tree/main/src/main/java/com/rdz/haclient/hdfs)
 
 ## HBase
 (HBase)[https://github.com/FateKFW/haclient/tree/main/src/main/java/com/rdz/haclient/hbase]
