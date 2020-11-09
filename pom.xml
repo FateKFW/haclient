@@ -58,14 +58,6 @@
 			<artifactId>hbase-server</artifactId>
 			<version>${hbase.version}</version>
 		</dependency>
-		<!-- jdk -->
-		<!--<dependency>
-			<groupId>jdk.tools</groupId>
-			<artifactId>jdk.tools</artifactId>
-			<version>${jdk.version}</version>
-			<scope>system</scope>
-			<systemPath>${java.home}/../lib/tools.jar</systemPath>
-		</dependency>-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
