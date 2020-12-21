@@ -34,6 +34,8 @@ public class HBaseClientTest {
 
     /**
      * 创建命名空间
+     * create_namespace 'ns1'
+     *
      * @throws IOException
      */
     @Test
@@ -46,6 +48,8 @@ public class HBaseClientTest {
 
     /**
      * 列出所有命名空间
+     * list_namespace
+     *
      * @throws IOException
      */
     @Test
@@ -76,6 +80,8 @@ public class HBaseClientTest {
 
     /**
      * 创建表
+     * create 't2','name','age'
+     *
      * @throws IOException
      */
     @Test
@@ -96,6 +102,7 @@ public class HBaseClientTest {
 
     /**
      * 修改表
+     * alter 't1','name' 增加name列簇
      * @throws IOException
      */
     @Test
@@ -117,6 +124,7 @@ public class HBaseClientTest {
 
     /**
      * 删除列簇
+     * alter 't1','delete'=>'age'
      * @throws IOException
      */
     @Test
@@ -162,7 +170,7 @@ public class HBaseClientTest {
 
         TableName tableName = TableName.valueOf("t1");
         if(admin.tableExists(tableName)) {
-            if(admin.isTableEnabled(tableName)) {
+            if (admin.isTableEnabled(tableName)) {
                 admin.disableTable(tableName);
             }
             admin.deleteTable(tableName);
@@ -172,6 +180,8 @@ public class HBaseClientTest {
 
     //DML
 
+    // put 't1','1001','f1:name','1s'
+    // put 't1','1001','f1:age','20'
     @Test
     void testPut() throws IOException {
         Table table = hBaseClient.getTable("t1");
@@ -184,6 +194,7 @@ public class HBaseClientTest {
         hBaseClient.closeTable(table);
     }
 
+    // get 't1','1000'
     @Test
     void testGet() throws IOException {
         Table table = hBaseClient.getTable("t1");
